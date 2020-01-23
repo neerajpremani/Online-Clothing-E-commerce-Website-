@@ -1,0 +1,35 @@
+$rate=(isset($_POST['term']));
+	if(isset($_POST['submit']))
+	{	
+
+		$query="update product set Ratings='$rate' where product_code='$code'";
+		$result=mysqli_query($con,$query);
+			
+			if($result)
+			{
+				header('location:viewoldcart.php');
+			}
+	}
+	
+	
+	
+	
+	
+	   
+ $email=$_SESSION['email'];
+
+	$pwd=$_SESSION['pwd'];
+		
+$rate=(isset($_POST['term']) ? $_POST['term'] : '');
+
+	if(isset($_POST['submit']))
+	{	
+
+		$query="update product set Ratings='$rate' where product_code='$code'";
+		$result=mysqli_query($con,$query);
+			
+			if($result)
+			{
+				header('location:viewoldcart.php');
+			}
+	}
